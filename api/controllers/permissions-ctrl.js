@@ -106,3 +106,8 @@ const getParityBits= async(req,res)=>{
         
     })
 }
+
+module.exports={
+    displayPermissions,
+    getParityBits
+}
