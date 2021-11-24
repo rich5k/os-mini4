@@ -86,3 +86,16 @@ const displayPermissions= async(req,res)=>{
         "other":`[${otherPerm}]`
     })
 }
+
+const getParityBits= async(req,res)=>{
+    var b1= req.params.bits1;
+    var b2= req.params.bits2;
+    var b3= req.params.bits3;
+    var b4= req.params.bits4;
+    
+    
+    return res.status(200).json({
+        parityBits
+        
+    })
+}
