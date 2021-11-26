@@ -38,7 +38,7 @@ const getParityBits= async(req,res)=>{
         else if(b4.toString().charAt(i)===1)
             numOnes++;
         if(numOnes%2==0)
-            parityBits+="0";
+            parityBits+=0;
         else
             parityBits+="1";
         numOnes=0;
