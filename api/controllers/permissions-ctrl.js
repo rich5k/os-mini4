@@ -1,5 +1,5 @@
 const displayPermissions= async(req,res)=>{
-    var number= req.params.number;
+    var number= req.query.code;
     var pbits= number.toString().split('').map(Number);
     var ownerBit= pbits[0];
     var groupBit= pbits[1];
