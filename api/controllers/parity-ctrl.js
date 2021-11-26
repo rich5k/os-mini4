@@ -28,19 +28,26 @@ const getParityBits= async(req,res)=>{
     }
     console.log(`${b1}, ${b2}, ${b3}, ${b4}`);
     var numOnes=0;
-    for(var i = 0; i<b1.toString.length;i++){
-        if(b1.toString().charAt(i)===1)
+    b1=b1.toString().split('').map(Number);
+    b2=b2.toString().split('').map(Number);
+    b3=b3.toString().split('').map(Number);
+    b4=b4.toString().split('').map(Number);
+    // console.log(b1.toString().length);
+    for(var i = 0; i<b1.toString().length-1;i++){
+         console.log("looped");
+        if(b1[i]===1)
             numOnes++;
-        else if(b2.toString().charAt(i)===1)
+        else if(b2[i]===1)
             numOnes++;
-        else if(b3.toString().charAt(i)===1)
+        else if(b3[i]===1)
             numOnes++;
-        else if(b4.toString().charAt(i)===1)
+        else if(b4[i]===1)
             numOnes++;
         if(numOnes%2==0)
-            parityBits+=0;
+            parityBits+="0";
         else
             parityBits+="1";
+        console.log(b4[i]);
         numOnes=0;
     }
     return res.status(200).json({
